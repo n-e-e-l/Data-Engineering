@@ -1,0 +1,14 @@
+version: "12.8"
+services:
+  app:
+    build: ./app/
+    depends_on:
+      - db
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-username}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-secret}
+      POSTGRES_DB: ${POSTGRES_PASSWORD:-database}
