@@ -1,4 +1,4 @@
-# future-demand-challenge
+# WebScraping Tool 
 
 Place the docker-compose and the app folder inside the same folder.
 
